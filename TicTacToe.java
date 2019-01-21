@@ -32,19 +32,91 @@ public class TicTacToe {
         game_over = false;
         x_move = 0;
         y_move = 0;
-
     }
 
     public void check_win(){
-        //TO DO
+        if(check_diagonal_win(given_player)|| check_horizontal_win(given_player) || check_vertical_win(given_player)){
+            game_over = true;
+        }
+
+        game_over = false;
+    }
+
+    public boolean check_diagonal_win(char given_player){
+        int counter = 0;
+
+        for(int i = 0; i < grid.length; ++i){
+            if(grid[i][i] == given_player){
+                counter++;
+            }
+        }
+        if(counter >= 3){
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean check_horizontal_win(char given_player){
+        int counter = 0;
+
+        for(int i = 0; i < grid.length; ++i){
+            for(j = 0; j < grid[i].length; ++j){
+                if(grid[i][j] == given_player){
+                    counter++;
+                }
+            }
+            if(counter >= 3){
+                return true;
+            }
+            counter = 0;
+        }
+
+        return false;
+    }
+
+    public boolean check_vertical_win(char given_player){
+        for(int i = 0; i < grid.length; ++i){
+            for(int j = 0; j < grid[i].length; ++j){
+                if(grid[j][i] == given_player){
+                    counter++;
+                }
+            }
+            if(counter >= 3){
+                return true;
+            }
+            counter = 0;
+        }
+        return false;
+    }
+
+    public void clear_screen() {
+        System.out.print("\033[H\033[2J");
     }
 
     public void display_end_game_message() {
-        //TO DO   
+        clear_screen();
+
+        if(get_current_turn() == 2) {
+            System.out.println("Player 1 won!");
+        }
+        else {
+            System.out.println("Player 2 won!");
+        }
+    }
+
+    public void display_grid() {
+        for(int i = 0; i < grid.length; ++i){
+            for(int j = 0; j < grid[i].length; ++j){
+                System.out.print(grid[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     public void init_grid(){
         Arrays.fill(grid, '*');
+        display_grid();
     }
 
     public void invalid_move_display() {
@@ -65,7 +137,8 @@ public class TicTacToe {
     }
 
     public void refresh_display(){
-        //TO DO
+        clear_screen();
+        display_grid();
     }
 
     public void set_current_turn(int new_turn) {
@@ -114,5 +187,10 @@ public class TicTacToe {
         }
 
         display_end_game_message();
+    }
+
+    public static void main() {
+        TicTacToe t = new TicTacToe();
+        t.play_game();
     }
 }
