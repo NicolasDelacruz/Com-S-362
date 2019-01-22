@@ -35,7 +35,7 @@ public class TicTacToe {
     }
 
     public void check_win(){
-        if(check_diagonal_win(given_player)|| check_horizontal_win(given_player) || check_vertical_win(given_player)){
+        if(check_diagonal_win(get_player_symb())|| check_horizontal_win(get_player_symb()) || check_vertical_win(get_player_symb())){
             game_over = true;
         }
 
@@ -61,7 +61,7 @@ public class TicTacToe {
         int counter = 0;
 
         for(int i = 0; i < grid.length; ++i){
-            for(j = 0; j < grid[i].length; ++j){
+            for(int j = 0; j < grid[i].length; ++j){
                 if(grid[i][j] == given_player){
                     counter++;
                 }
@@ -76,6 +76,8 @@ public class TicTacToe {
     }
 
     public boolean check_vertical_win(char given_player){
+        int counter = 0;
+
         for(int i = 0; i < grid.length; ++i){
             for(int j = 0; j < grid[i].length; ++j){
                 if(grid[j][i] == given_player){
@@ -141,12 +143,16 @@ public class TicTacToe {
         display_grid();
     }
 
-    public void set_current_turn(int new_turn) {
-        current_turn = new_turn;
-    }
-
     public int get_current_turn(){
         return current_turn;
+    }
+
+    public boolean get_game_over() {
+        return game_over;
+    }
+
+    public void set_current_turn(int new_turn) {
+        current_turn = new_turn;
     }
 
     public void set_move(){
@@ -169,12 +175,17 @@ public class TicTacToe {
         check_win();
     }
 
-    public boolean get_game_over() {
-        return game_over;
-    }
-
     public boolean valid_move(int given_x, int given_y){
         return true;
+    }
+
+    public char get_player_symb(){
+        if(get_current_turn() == 1){
+            return 'X';
+        }
+        else{
+            return 'O';
+        }
     }
 
     public void play_game(){
