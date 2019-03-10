@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class employeeDatabase {
     File file;
@@ -55,8 +52,34 @@ public class employeeDatabase {
 
     }
 
-    public void removeEmployee(int empID){
+    public void removeEmployee(Employee e) throws IOException {
+        File inputFile = new File("Employee_Info.txt");
+        File tempFile = new File("myTempFile.txt");
 
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+        String employeeRecord;
+
+        String name = e.getEmplyeeName();
+        String department = e.getDepartment();
+        String DOB = e.getDOB();
+        String hireDate = e.getHireDate();
+        int ID = e.getID();
+        int salary = e.getSalary();
+        employeeRecord = name + ", " + ID + ", " + department +", " + salary + ", " + DOB + ", " + hireDate;
+
+        String currentLine;
+
+        while((currentLine = reader.readLine()) != null) {
+            // trim newline when comparing with lineToRemove
+            String trimmedLine = currentLine.trim();
+            if(trimmedLine.equals(employeeRecord)) continue;
+            writer.write(currentLine + System.getProperty("line.separator"));
+        }
+        writer.close();
+        reader.close();
+        tempFile.renameTo(inputFile);
     }
 
 
