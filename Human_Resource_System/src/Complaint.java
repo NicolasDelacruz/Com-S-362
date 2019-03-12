@@ -1,12 +1,20 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Complaint {
     String givenComplaint;
     Scanner fileReader;
+    File file;
 
     public Complaint(String message){
         givenComplaint = message;
-        fileReader = new Scanner("complaints.txt");
+        file = new File("complaints.txt");
+        try {
+            fileReader = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addComplaint(){
@@ -19,36 +27,37 @@ public class Complaint {
         String command = "Y";
         //TO DO
         Scanner reader = new Scanner(System.in);  // Reading from System.in
-        while (command.equals("Y") && reader.hasNext()){
+        while (command.equals("Y") && fileReader.hasNext()){
             System.out.println("Next complaint:");
-            message = getNextComplaint();
+            getNextComplaint();
             System.out.println(message);
 
             System.out.println("View next complaint? (Y/N)");
             command = reader.nextLine();
+
+            if(!fileReader.hasNext()){
+                command = "N";
+            }
         }
         System.out.println("Leaving complaints..");
-        reader.close();
         fileReader.close();
 
     }
 
-    public String getNextComplaint(){
+    public void getNextComplaint(){
         boolean endOfComplaint = false;
-        String complaint = "";
         String currentLine;
         while(!endOfComplaint){
             currentLine = fileReader.nextLine();
             if(currentLine.equals("BEGIN OF COMPLAINT")){
-                complaint = "";
+                System.out.println("Beggining of complaint:");
             }
             else if(currentLine.equals("END OF COMPLAINT")){
                 endOfComplaint = true;
             }
             else{
-                complaint += currentLine;
+                System.out.println(currentLine);
             }
         }
-        return  complaint;
     }
 }
