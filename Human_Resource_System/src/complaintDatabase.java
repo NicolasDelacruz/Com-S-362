@@ -1,11 +1,11 @@
 import java.io.*;
 
-public class employeeDatabase {
+public class complaintDatabase {
     File file;
 
 
-    public employeeDatabase() {
-        file = new File("Employee_Info.txt");
+    public complaintDatabase() {
+        file = new File("complaints.txt");
         generateDataFile();
     }
 
@@ -15,7 +15,7 @@ public class employeeDatabase {
                 file.createNewFile();
                 FileWriter fw = new FileWriter(file, true);
                 PrintWriter pw = new PrintWriter(fw);
-                pw.println("NAME, ID, DEPARTMENT, SALARY, DOB, HIRE_DATE");
+                pw.println("Complaint Database");
                 pw.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -28,7 +28,9 @@ public class employeeDatabase {
             try {
                 FileWriter fw = new FileWriter(file, true);
                 PrintWriter pw = new PrintWriter(fw);
+                pw.println("BEGIN OF COMPLAINT");
                 pw.println(s);
+                pw.println("END OF COMPLAINT");
                 pw.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -36,19 +38,10 @@ public class employeeDatabase {
         }
     }
 
-    public void addEmployee(Employee e){
-        String employeeRecord;
+    public void addComplaint(String c){
+        String complaint = c;
 
-        String name = e.getEmployeeName();
-        String department = e.getDepartment();
-        String DOB = e.getDOB();
-        String hireDate = e.getHireDate();
-        int ID = e.getID();
-        int salary = e.getSalary();
-
-        employeeRecord = name + ", " + ID + ", " + department +", " + salary + ", " + DOB + ", " + hireDate;
-
-        write(employeeRecord);
+        write(complaint);
 
     }
 
