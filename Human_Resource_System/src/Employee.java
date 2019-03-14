@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Employee implements EmployeeInterface {
     private String department, DOB, hireDate, name;
     int ID, salary;
@@ -41,35 +39,9 @@ public class Employee implements EmployeeInterface {
     }
 
     public void doAction(){
-        printAvailableActions();
-        String command = "";
-
-        Scanner reader = new Scanner(System.in);  // Reading from System.in
-        while (!command.equals("Q")){
-            System.out.println("What action would you like to do? ");
-            command = reader.nextLine();
-
-            if(command.equals("C")){
-                Complaint c = new Complaint("");
-                c.viewComplaints();
-            }
-            else if(command.equals("RC")){
-                System.out.println("Please type the complaint below. This is anonymous.");
-                String comp = reader.nextLine();
-                Complaint c = new Complaint(comp);
-                c.addComplaint();
-                System.out.println("The complaint has been filed. Our team will look into this issue.");
-            }
+        if(getDepartment().equals("Human Resources")){
+            HRDepartment h = new HRDepartment(this);
+            h.doFunctions();
         }
-
-        System.out.println("Logging off account: " + name);
-
-        //once finished
-        reader.close();
-    }
-
-    public void printAvailableActions(){
-        System.out.println("Hello, "+ name);
-        System.out.println("View Complaints [C], Report Complaints [RC], Quit [Q]");
     }
 }
