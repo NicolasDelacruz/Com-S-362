@@ -1,35 +1,48 @@
+import java.io.IOException;
+
+/**
+ *
+ * @author Song
+ *
+ * Employee is the 'Creator' as it creates the instances of Department
+ */
 public class Employee implements EmployeeInterface {
     private String department, DOB, hireDate, name;
-    int ID, salary;
+    private int ID, salary;
+    private double retirement;
 
-    public Employee(String empDepartment, String empDOB, String empHireDate, String empName, int empID, int empSalary){
+    public Employee(String empDepartment, String empDOB, String empHireDate, String empName, int empID, int empSalary, double empRetirement){
         department = empDepartment;
         DOB = empDOB;
         hireDate = empHireDate;
         name = empName;
         ID = empID;
         salary = empSalary;
-
+        retirement = empRetirement;
     }
 
-
-    public String getDepartment(){
+    @Override
+    public String getDepartment() {
         return department;
     }
 
-    public String getDOB(){
+    @Override
+    public String getDOB() {
         return DOB;
     }
 
-    public String getHireDate(){
+    @Override
+    public String getHireDate() {
         return hireDate;
     }
 
-    public String getEmployeeName(){
+    @Override
+    public String getEmployeeName() {
         return name;
     }
 
-    public int getID(){
+    @Override
+    public int getID() {
         return ID;
     }
 
@@ -38,7 +51,18 @@ public class Employee implements EmployeeInterface {
         return salary;
     }
 
-    public void doAction(){
+    @Override
+    public double getRetirement() {
+        return retirement;
+    }
+
+    @Override
+    public void setDepartment(String dep) {
+        department = dep;
+    }
+
+    @Override
+    public void doAction() throws IOException {
         if(getDepartment().equals("Human Resources")){
             HRDepartment h = new HRDepartment(this);
             h.doFunctions();

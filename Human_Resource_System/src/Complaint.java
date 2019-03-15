@@ -17,11 +17,19 @@ public class Complaint {
         }
     }
 
+    /**
+     * add complaint to database
+     */
     public void addComplaint(){
         complaintDatabase d = new complaintDatabase();
         d.addComplaint(givenComplaint);
     }
 
+    /**
+     * view complaints from the start of the file
+     * User can go to next complaint by typing 'Y'
+     * can exit with 'N'
+     */
     public void viewComplaints(){
         String message = "";
         String command = "Y";
@@ -44,6 +52,10 @@ public class Complaint {
 
     }
 
+    /**
+     * print next complaint delimited by "BEGIN OF COMPLAINT" and "END OF COMPLAINT"
+     * function used in viewComplaints()
+     */
     public void getNextComplaint(){
         boolean endOfComplaint = false;
         String currentLine;
