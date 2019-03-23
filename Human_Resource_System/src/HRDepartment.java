@@ -74,6 +74,10 @@ public class HRDepartment implements DepartmentInterface {
                 EmployeeVacation c = new EmployeeVacation();
                 c.viewVacation(id);
             }
+            else if(command.equals("AW")){
+                WorkHours wh = new WorkHours();
+                wh.addWorkHours(id);
+            }
             else if(command.equals("SW")) {
                 WorkHours a = new WorkHours();
                 a.viewWorkHours(id);
@@ -147,7 +151,7 @@ public class HRDepartment implements DepartmentInterface {
         String employeeName = tempEmp.getEmployeeName();
         System.out.println("Hello, "+ employeeName);
         System.out.println("Employee Functions:");
-        System.out.println("View Retirement Report [VR], View Employee Vacation [VV], Show Work Hours [SW], Report Complaints [RC]");
+        System.out.println("View Retirement Report [VR], View Employee Vacation [VV], Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
         System.out.println("------");
         System.out.println("Employee Management:");
         System.out.println("Report Complaints [RC], Transfer Employee [TR]");

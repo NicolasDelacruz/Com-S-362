@@ -1,4 +1,2 @@
-id:1111
-year:2019
-month:1
-time:18.4
+EMPLOYEE ID, DATE, TIME WORKED
+1111, 03/23/2019, 8

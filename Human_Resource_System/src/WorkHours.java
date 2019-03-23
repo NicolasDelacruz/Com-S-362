@@ -11,8 +11,13 @@ public class WorkHours {
         a = new WorkHoursDatabase();
     }
 
-    public void addWorkHours(int eid, int year, int month, double hours){
-        a.addWorkHoursDB(eid, year, month, hours);
+    public void addWorkHours(int eid){
+        int hours;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("How many hours did you work?");
+        hours = input.nextInt();
+        a.addWorkHoursDB(eid, hours);
     }
 
     public void viewWorkHours(int eid){
