@@ -37,7 +37,7 @@ public class WorkHoursDatabase {
         }
     }
 
-    public void addWorkHoursDB(int eid, int timeWorked){
+    public void addWorkHoursDB(int eid, double timeWorked){
         LocalDate date = LocalDate.now();
         String stringDate = DateTimeFormatter.ofPattern("MM/dd/yyyy").format(date);
         String workHoursEntry = eid + ", " + stringDate + ", " + timeWorked;

@@ -80,7 +80,7 @@ public class HRDepartment implements DepartmentInterface {
             }
             else if(command.equals("SW")) {
                 WorkHours a = new WorkHours();
-                a.viewWorkHours(id);
+                a.viewWorkHours(tempEmp);
             }
             // Job Post / Applicants Commands
             else if(command.equals("VJP"))
