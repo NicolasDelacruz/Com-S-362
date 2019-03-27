@@ -1,18 +1,17 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class JobPostDatabase {
     File file;
     File file2;
 
-    private ArrayList<JobPost> jobPostList = new ArrayList<JobPost>();
-
     public JobPostDatabase() {
         file = new File("Job_Postings.txt");
         file2 = new File("Job_Applicants.txt");
         generateDataFile();
+        generateApplicantDataFile();
     }
 
     public void generateDataFile(){
@@ -21,7 +20,7 @@ public class JobPostDatabase {
                 file.createNewFile();
                 FileWriter fw = new FileWriter(file, true);
                 PrintWriter pw = new PrintWriter(fw);
-                pw.println("TITLE, ID, DEPARTMENT, POST DATE, SALARY, DESCRIPTION");
+                pw.println("TITLE, ID, DEPARTMENT, POST DATE, SALARY");
                 pw.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -35,7 +34,7 @@ public class JobPostDatabase {
                 file2.createNewFile();
                 FileWriter fw = new FileWriter(file2, true);
                 PrintWriter pw = new PrintWriter(fw);
-                pw.println("APPLICANT NAME, APPLICANT DOB, TITLE, JOB POST ID, DEPARTMENT, POST DATE, SALARY, DESCRIPTION");
+                pw.println("APPLICANT NAME, APPLICANT DOB, TITLE, JOB POST ID, DEPARTMENT, POST DATE, SALARY");
                 pw.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -80,57 +79,112 @@ public class JobPostDatabase {
     }
 
     public void addJobPost(JobPost p){
-        jobPostList.add(p);
-
         String jobPostDetails;
 
         String title = p.getJobTitle();
         String department = p.getDepartment();
-        String desc = p.getDesc();
         String postDate = p.getPostDate();
         int ID = p.getID();
         int salary = p.getSalary();
 
-        jobPostDetails = title + ", " + ID + ", " + department +", " + postDate + ", " + salary + ", " + desc;
+        jobPostDetails = title + ", " + ID + ", " + department +", " + postDate + ", " + salary;
 
-        writeJobApplicant(jobPostDetails);
-
+        write(jobPostDetails);
     }
 
-    public void acceptApplicant(JobPost p, String name)
+    public Employee acceptApplicant(JobPost p, String name) throws IOException
     {
         boolean success = false;
-        JobPost job = p;
         String empName = name;
 
-        for(int i = 0; i < jobPostList.size(); i++)
+        double retirement = 0;
+        String DOB, department;
+        String strID = Integer.toString(p.getID());
+        int ID, salary;
+
+        File inputFile = new File("Job_Applicants.txt");;
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+
+        while(reader.ready())
         {
-            if(jobPostList.get(i).equals(job))
+            List<String> applicantInfo = Arrays.asList(reader.readLine().split("\\s*,\\s*"));
+            if(applicantInfo.contains(empName) && applicantInfo.contains(strID))
             {
-                jobPostList.get(i).accept(empName);
-                jobPostList.remove(i);
+                DOB = applicantInfo.get(1);
+                department = applicantInfo.get(4);
+                ID = Integer.parseInt(applicantInfo.get(3));
+                salary = Integer.parseInt(applicantInfo.get(6));
+
+                Employee emp = new Employee(department, DOB, new Date().toString(), empName, ID, salary, retirement);
                 success = true;
-                break;
+                reader.close();
+
+
+                removeJobPost(p);
+                removeJobApplicants(p);
+
+                return emp;
             }
         }
-
         if(!success)
         {
             System.out.println("Failed to accept applicant " + name + " for position " + p.getJobTitle());
         }
+
+        reader.close();
+
+        return null;
     }
 
-    public void viewJobPosts()
+    // view applicants DONE
+    public void viewApplicants(JobPost p) throws IOException
     {
-        for(int i = 0; i < jobPostList.size(); i++)
+        String strID = Integer.toString(p.getID());
+        String appName;
+        String DOB, department, title, postDate;
+        int ID, salary;
+
+        File inputFile = new File("Job_Applicants.txt");;
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+
+        while(reader.ready())
         {
-            System.out.println(i + ". " + jobPostList.get(i).getJobPost());
+            List<String> applicantInfo = Arrays.asList(reader.readLine().split("\\s*,\\s*"));
+            // Make sure job ID's match
+            if(applicantInfo.contains(strID))
+            {
+                appName = applicantInfo.get(0);
+                DOB = applicantInfo.get(1);
+                title = applicantInfo.get(2);
+                ID = Integer.parseInt(applicantInfo.get(3));
+                department = applicantInfo.get(4);
+                postDate = applicantInfo.get(5);
+                salary = Integer.parseInt(applicantInfo.get(6));
+
+                System.out.println(appName + ", " + DOB + ", " + title + ", " + ID + ", " + department + ", " +
+                        postDate + ", " + salary);
+            }
+
         }
+
+        reader.close();
+    }
+
+    // go through text file DONE
+    public void viewJobPosts() throws IOException
+    {
+        File inputFile = new File("Job_Postings.txt");
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+
+        while(reader.ready())
+        {
+            System.out.println(reader.readLine());
+        }
+
+        reader.close();
     }
 
     public void removeJobPost(JobPost p) throws IOException {
-        jobPostList.remove(p);
-
         File inputFile = new File("Job_Postings.txt");
         File tempFile = new File("myTempFile.txt");
 
@@ -141,12 +195,11 @@ public class JobPostDatabase {
 
         String title = p.getJobTitle();
         String department = p.getDepartment();
-        String desc = p.getDesc();
         String postDate = p.getPostDate();
         int ID = p.getID();
         int salary = p.getSalary();
 
-        jobPostDetails = title + ", " + ID + ", " + department +", " + postDate + ", " + salary + ", " + desc;
+        jobPostDetails = title + ", " + ID + ", " + department +", " + postDate + ", " + salary;
 
         String currentLine;
 
@@ -158,46 +211,67 @@ public class JobPostDatabase {
         }
         writer.close();
         reader.close();
+
+        inputFile.delete();
         tempFile.renameTo(inputFile);
     }
 
-    public void fillJobPostList() throws IOException {
-        File inputFile = new File("Job_Postings.txt");
+    public void removeJobApplicants(JobPost p) throws IOException
+    {
+        File inputFile = new File("Job_Applicants.txt");
+        File tempFile = new File("myTempFile.txt");
+
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+        int ID = p.getID();
+
+        String currentLine;
+
+        while((currentLine = reader.readLine()) != null) {
+            // trim newline when comparing with lineToRemove
+            List<String> applicantInfo = Arrays.asList(currentLine.split("\\s*,\\s*"));
+            if(!applicantInfo.get(0).equals("APPLICANT NAME") && ID == Integer.parseInt(applicantInfo.get(3))) continue;
+            writer.write(currentLine + System.getProperty("line.separator"));
+        }
+        writer.close();
+        reader.close();
+
+        inputFile.delete();
+        tempFile.renameTo(inputFile);
+    }
+
+    // get job post from text file DONE
+    public JobPost getJobPost(int num) throws IOException
+    {
         JobPost jp;
+        String strID = Integer.toString(num);
+        File inputFile = new File("Job_Postings.txt");
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
 
-            String department, description, postDate, title, ID, salary;
+            String department, postDate, title, ID, salary;
 
             String currentLine;
 
             while ((currentLine = reader.readLine()) != null) {
                 // trim newline when comparing with lineToRemove
                 List<String> JobPostInfo = Arrays.asList(currentLine.split("\\s*,\\s*"));
-                if(!JobPostInfo.get(0).equals("TITLE")) {
+                if(JobPostInfo.contains(strID)) {
                     department = JobPostInfo.get(2);
-                    description = JobPostInfo.get(5);
                     postDate = JobPostInfo.get(3);
                     title = JobPostInfo.get(0);
                     ID = JobPostInfo.get(1);
                     salary = JobPostInfo.get(4);
 
-                    jp = new JobPost(department, description, postDate, title, Integer.parseInt(ID), Integer.parseInt(salary));
+                    jp = new JobPost(department, postDate, title, Integer.parseInt(ID), Integer.parseInt(salary));
 
-                    jobPostList.add(jp);
+                    return jp;
                 }
             }
         }
-    }
 
-    public JobPost getJobPost(int num) throws IOException {
-        JobPost jp;
-        fillJobPostList();
-        for (int i = 0; i < jobPostList.size(); ++i) {
-            jp = jobPostList.get(i);
-            if (jp.getID() == num) {
-                return jp;
-            }
-        }
+        System.out.println("Could not retrieve Job Post: " + num);
+
         return null;
     }
 

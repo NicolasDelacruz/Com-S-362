@@ -87,16 +87,16 @@ public class HRDepartment implements DepartmentInterface {
                 a.viewWorkHours(tempEmp);
             }
             // Job Post / Applicants Commands
+            // View Job Post
             else if(command.equals("VJP"))
             {
                 jpdb.viewJobPosts();
             }
+            // Add Job Post
             else if(command.equals("AJP"))
             {
                 System.out.println("Enter Department ");
                 String dept = reader.nextLine();
-                System.out.println("Enter Description ");
-                String desc = reader.nextLine();
                 System.out.println("Enter Post Date ");
                 String postDate = reader.nextLine();
                 System.out.println("Enter Job Title ");
@@ -106,25 +106,68 @@ public class HRDepartment implements DepartmentInterface {
                 System.out.println("Enter Salary ");
                 String salary = reader.nextLine();
 
-                JobPost jp = new JobPost(dept, desc, postDate, title, Integer.parseInt(id), Integer.parseInt(salary));
-
-                jpdb.addJobPost(jp);
+                jpdb.addJobPost(new JobPost(dept, postDate, title, Integer.parseInt(id), Integer.parseInt(salary)));
             }
+            // Select Job Post
             else if(command.equals("SJP"))
             {
                 JobPost jp;
                 int jpNum;
                 System.out.println("Enter Job post number: ");
                 jpNum = Integer.parseInt(reader.nextLine());
-
                 jp = jpdb.getJobPost(jpNum);
-                if(jp != null) {
-                    jp.doAction(jp);
+
+                // Check to see if it's a real job post number
+                if(jp != null)
+                {
+                    while(!command.equals("R"))
+                    {
+                        System.out.println("------");
+                        System.out.println("Selected Job Post: " + jpNum);
+                        System.out.println("Add Job Post Applicants [APA], View Job Post Applicants [VPA], Accept Job Applicant [AJA], Return [R]");
+                        System.out.println("What action would you like to do? ");
+                        command = reader.nextLine();
+
+                        // Add
+                        if(command.equals("APA")){
+                            String newApplicant;
+                            // Get Name and DOB of Applicant
+                            System.out.println("Enter Applicants Name");
+                            String appName = reader.nextLine();
+
+                            System.out.println("Enter Applicants Date of Birth (DOB)");
+                            String appDOB = reader.nextLine();
+
+                            newApplicant = appName + ", " + appDOB + ", " + jp.getJobTitle() + ", " + jp.getID() + ", " + jp.getDepartment() + ", " + jp.getPostDate() + ", " + jp.getSalary();
+
+                            jpdb.writeJobApplicant(newApplicant);
+                        }
+                        // View
+                        else if(command.equals("VPA")){
+                            jpdb.viewApplicants(jp);
+                        }
+                        // Accept Job Applicant
+                        else if(command.equals("AJA"))
+                        {
+                            String appName;
+                            System.out.println("Enter applicants name: ");
+                            appName = reader.nextLine();
+
+                            Employee emp = jpdb.acceptApplicant(jpdb.getJobPost(jpNum), appName);
+
+                            employeeDatabase ed = new employeeDatabase();
+                            ed.addEmployee(emp);
+                        }
+                    }
                 }
-                else {
-                    System.out.println("Job post not found.");
+                else
+                {
+                    // not real, print error
+                    System.out.println("Failed to find Job Post ID: " + jpNum);
                 }
+
             }
+            // Accept Job Applicant
             else if(command.equals("AJA"))
             {
                 int jpNum;
@@ -155,12 +198,12 @@ public class HRDepartment implements DepartmentInterface {
         String employeeName = tempEmp.getEmployeeName();
         System.out.println("Hello, "+ employeeName);
         System.out.println("Employee Functions:");
-        System.out.println("View Retirement Report [VR], Add Employee Vacation[AV], View Employee Vacation [VV], Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
+        System.out.println("View Retirement Report [VR], View Employee Vacation [VV], Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
         System.out.println("------");
         System.out.println("Employee Management:");
         System.out.println("Report Complaints [RC], Transfer Employee [TR]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
-        System.out.println("Add Job Post [AJP], View Job Post [VJP], Accept Job Application [AJA], ???[SJP]");
+        System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");
     }
 }

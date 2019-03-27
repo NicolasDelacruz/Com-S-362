@@ -1,2 +1,1 @@
-TITLE, ID, DEPARTMENT, POST DATE, SALARY, DESCRIPTION
-Accounting Assistant, 1001, Accounting, 03/15/2019, 1000, Will do accounting stuff.
+TITLE, ID, DEPARTMENT, POST DATE, SALARY
