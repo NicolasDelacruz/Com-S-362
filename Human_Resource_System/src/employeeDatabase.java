@@ -50,20 +50,23 @@ public class employeeDatabase {
      * write employee e's data in the file using write(String s)
      * @param e - employee being added to the list of employee data
      */
-    public void addEmployee(Employee e){
-        String employeeRecord;
+    public void addEmployee(Employee e) throws IOException {
 
-        String name = e.getEmployeeName();
-        String department = e.getDepartment();
-        String DOB = e.getDOB();
-        String hireDate = e.getHireDate();
-        int ID = e.getID();
-        int salary = e.getSalary();
-        double retirement = e.getRetirement();
+        if(getEmployee(e.getID()) == null) {
+            String employeeRecord;
 
-        employeeRecord = name + ", " + ID + ", " + department +", " + salary + ", " + DOB + ", " + hireDate + ", " + retirement;
+            String name = e.getEmployeeName();
+            String department = e.getDepartment();
+            String DOB = e.getDOB();
+            String hireDate = e.getHireDate();
+            int ID = e.getID();
+            int salary = e.getSalary();
+            double retirement = e.getRetirement();
 
-        write(employeeRecord);
+            employeeRecord = name + ", " + ID + ", " + department + ", " + salary + ", " + DOB + ", " + hireDate + ", " + retirement;
+
+            write(employeeRecord);
+        }
 
     }
 

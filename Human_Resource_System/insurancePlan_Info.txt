@@ -1,0 +1,15 @@
+NAME, ID, DEPARTMENT, SALARY, DOB, HIRE_DATE
+id:1122
+type:0
+s/f:0
+children:0
+price:800
+desc:Dental check ups, medical check ups, $1000 deductible on operations up to $20,000
+END
+id:4441
+type:2
+s/f:0
+children:0
+price:5000
+desc:Full dental coverage, up to $3,000 per person outside of checkups, Complete medical appointments, $2000 deductible on operations up to $100,000
+END

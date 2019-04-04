@@ -180,6 +180,37 @@ public class HRDepartment implements DepartmentInterface {
 
                 jpdb.acceptApplicant(jpdb.getJobPost(jpNum), appName);
             }
+            else if(command.equals("VF")){
+                printAvailableOptions();
+            }
+            else if(command.equals("VI")) {
+                insuracePlan d = new insuracePlan();
+                d.viewInsurancePlan(id);
+            }
+            else if(command.equals("EI")) {
+                insuracePlan e = new insuracePlan();
+                System.out.println("Please type the Insurance Plan you want.");
+                System.out.println("Please type 0 for Basic plan.");
+                System.out.println("Please type 1 for Intermediate plan.");
+                System.out.println("Please type 2 for Full coverage plan.");
+                command = reader.nextLine();
+                int plan_type = Integer.valueOf(command);
+                System.out.println("Do you want single plan or family plan.");
+                System.out.println("Family plan include maximun 5 people(3 children)");
+                System.out.println("Please type 0 for Single plan.");
+                System.out.println("Please type 1 for Family plan.");
+                command = reader.nextLine();
+                int single_family = Integer.valueOf(command);
+                int add_children = 0;
+                if(single_family == 1) {
+                    System.out.println("Please type the number of children you want to add.");
+                    command = reader.nextLine();
+                    add_children = Integer.valueOf(command);
+                }
+                e.editInsurancePlan(id, plan_type, single_family, add_children);
+                System.out.println("Your insurance plan has been updated!");
+            }
+
         }
 
         System.out.println("Logging off account: " );
@@ -198,10 +229,13 @@ public class HRDepartment implements DepartmentInterface {
         String employeeName = tempEmp.getEmployeeName();
         System.out.println("Hello, "+ employeeName);
         System.out.println("Employee Functions:");
-        System.out.println("View Retirement Report [VR], View Employee Vacation [VV], Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
+        System.out.println("View Retirement Report [VR], View Employee Vacation [VV]");
+        System.out.println("Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
+        System.out.println("View Company Insurance Plan [VI], Edit Company Insurance Plan [EI]");
+        System.out.println("View Functions [VF]");
         System.out.println("------");
         System.out.println("Employee Management:");
-        System.out.println("Report Complaints [RC], Transfer Employee [TR]");
+        System.out.println("View Complaints [VC], Transfer Employee [TR]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");
