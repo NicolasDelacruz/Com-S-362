@@ -1,0 +1,12 @@
+Event Database
+ID, TITLE, DATE, STARTDATE, ENDDATE, COST
+BEGIN OF EVENT
+1, Movie Night, 04/04/2019, 04/05/2019, 04/06/2019, 1000
+
+1278  Event Test  
+4441  Timmy  
+4441  Timmy  
+4441  Timmy  
+4441  Timmy  
+4441  Timmy  
+END OF EVENT

@@ -1,6 +1,9 @@
 import org.jetbrains.annotations.NotNull;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /**
@@ -11,13 +14,15 @@ public class HRDepartment implements DepartmentInterface {
     JobPostDatabase jpdb;
     String department;
     Employee tempEmp;
+    EventDatabase ed;
     int id;
 
-    public HRDepartment(@NotNull Employee e){
+    public HRDepartment(@NotNull Employee e) throws FileNotFoundException {
         department = "Human Resources";
         tempEmp = e;
         id = e.getID();
         jpdb = new JobPostDatabase();
+        ed = new EventDatabase();
     }
 
     @Override
@@ -180,9 +185,6 @@ public class HRDepartment implements DepartmentInterface {
 
                 jpdb.acceptApplicant(jpdb.getJobPost(jpNum), appName);
             }
-            else if(command.equals("VF")){
-                printAvailableOptions();
-            }
             else if(command.equals("VI")) {
                 insuracePlan d = new insuracePlan();
                 d.viewInsurancePlan(id);
@@ -210,7 +212,36 @@ public class HRDepartment implements DepartmentInterface {
                 e.editInsurancePlan(id, plan_type, single_family, add_children);
                 System.out.println("Your insurance plan has been updated!");
             }
-
+            else if(command.equals("VE")) {
+                ed.viewEvents();
+            }
+            else if(command.equals("RS")) {
+                System.out.println("Enter event ID: ");
+                int eid = reader.nextInt();
+                String a = reader.nextLine();
+                ed.writeRSVP(tempEmp, a, eid);
+            }
+            else if(command.equals("CE")) {
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                LocalDate localDate = LocalDate.now();
+                System.out.println("Enter Event Title : ");
+                String title = reader.nextLine();
+                System.out.println("Type Start Date in MM/dd/yyyy format: ");
+                String start = reader.nextLine();
+                System.out.println("Type End Date in MM/dd/yyyy format: ");
+                String end = reader.nextLine();
+                System.out.println("Enter Cost of Event : ");
+                int cost = reader.nextInt();
+                System.out.println("Give Event ID : ");
+                int id = reader.nextInt();
+                System.out.println("Enter Event Detail : ");
+                String s = reader.nextLine();
+                Event ev = new Event(dtf.format(localDate), title, start, end, cost, id);
+                ed.addEvent(s, ev);
+            }
+            else if(command.equals("VF")){
+                printAvailableOptions();
+            }
         }
 
         System.out.println("Logging off account: " );
@@ -232,6 +263,7 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("View Retirement Report [VR], View Employee Vacation [VV]");
         System.out.println("Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
         System.out.println("View Company Insurance Plan [VI], Edit Company Insurance Plan [EI]");
+        System.out.println("View Events [VE], RSVP to an Event [RS]");
         System.out.println("View Functions [VF]");
         System.out.println("------");
         System.out.println("Employee Management:");

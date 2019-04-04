@@ -66,8 +66,12 @@ public class Employee implements EmployeeInterface {
         employeeDatabase e = new employeeDatabase();
         e.addEmployee(this);
         if(getDepartment().equals("Human Resources")){
-            HRDepartment h = new HRDepartment(this);
-            h.doFunctions();
+            HRDepartment hrEmployee = new HRDepartment(this);
+            hrEmployee.doFunctions();
+        }
+        else if(getDepartment().equals("Event Management")){
+            EventDepartment eventEmployee = new EventDepartment(this);
+            eventEmployee.doFunctions();
         }
     }
 }
