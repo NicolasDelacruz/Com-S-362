@@ -145,4 +145,25 @@ public class employeeDatabase {
 
         return null;
     }
+
+    /**
+     * This method prints employee information
+     * @param id
+     * @throws IOException
+     */
+    public void printEmployeeInfo(int id) throws IOException {
+        File inputFile = new File("Employee_Info.txt");
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+
+        String currentLine;
+        String strID = Integer.toString(id);
+        System.out.println("NAME, ID, DEPARTMENT, SALARY, DOB, HIRE_DATE, RETIREMENT");
+        while((currentLine = reader.readLine()) != null) {
+            List<String> employeeInfo = Arrays.asList(currentLine.split("\\s*,\\s*"));
+            if(employeeInfo.get(1).equals(strID)){
+                System.out.println(currentLine);
+            }
+        }
+        reader.close();
+    }
 }

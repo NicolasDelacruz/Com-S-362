@@ -239,6 +239,13 @@ public class HRDepartment implements DepartmentInterface {
                 Event ev = new Event(dtf.format(localDate), title, start, end, cost, id);
                 ed.addEvent(s, ev);
             }
+            else if(command.equals("FE")){
+                employeeDatabase temp = new employeeDatabase();
+                System.out.println("Enter Employee's ID: ");
+                int id = reader.nextInt();
+                temp.printEmployeeInfo(id);
+                System.out.println("Test");
+            }
             else if(command.equals("VF")){
                 printAvailableOptions();
             }
@@ -263,7 +270,7 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("View Retirement Report [VR], View Employee Vacation [VV]");
         System.out.println("Add Work Hours [AW], Show Work Hours [SW], Report Complaints [RC]");
         System.out.println("View Company Insurance Plan [VI], Edit Company Insurance Plan [EI]");
-        System.out.println("View Events [VE], RSVP to an Event [RS]");
+        System.out.println("View Events [VE], RSVP to an Event [RS], Find Employee [FE]");
         System.out.println("View Functions [VF]");
         System.out.println("------");
         System.out.println("Employee Management:");
