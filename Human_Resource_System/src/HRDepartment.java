@@ -244,7 +244,24 @@ public class HRDepartment implements DepartmentInterface {
                 System.out.println("Enter Employee's ID: ");
                 int id = reader.nextInt();
                 temp.printEmployeeInfo(id);
-                System.out.println("Test");
+            }
+            else if(command.equals("CER")){
+                Report r = new Report();
+                if(r.createExpenseReport()){
+                    System.out.println("Report was created and is in your downloads folder.");
+                }
+                else {
+                    System.out.println("Report has previously been created and is in your downloads folder.");
+                }
+            }
+            else if(command.equals("DSR")){
+                Report r = new Report();
+                if(r.createDepartmentReport()){
+                    System.out.println("Report was created and is in your downloads folder.");
+                }
+                else {
+                    System.out.println("Report has previously been created and is in your downloads folder.");
+                }
             }
             else if(command.equals("VF")){
                 printAvailableOptions();
@@ -278,5 +295,8 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");
+        System.out.println("------");
+        System.out.println("Report Generation");
+        System.out.println("Company Expense Report [CER], Department Statistics Report [DSR]");
     }
 }
