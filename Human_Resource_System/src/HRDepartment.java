@@ -234,6 +234,7 @@ public class HRDepartment implements DepartmentInterface {
                 int cost = reader.nextInt();
                 System.out.println("Give Event ID : ");
                 int id = reader.nextInt();
+                reader.nextLine();
                 System.out.println("Enter Event Detail : ");
                 String s = reader.nextLine();
                 Event ev = new Event(dtf.format(localDate), title, start, end, cost, id);

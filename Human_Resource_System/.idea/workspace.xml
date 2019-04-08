@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11201d3-2026-45f5-b44e-b86f56af6b96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Report.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insurancePlan_Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/insurancePlan_Info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_System/EventDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/EventDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HRDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HRDepartment.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,45 +22,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="238" column="45" selection-start-line="238" selection-start-column="45" selection-end-line="238" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4679#7226#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="93" column="4" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4679#7226#1" />
-                <element signature="e#11973#11974#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Report.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="282" column="5" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Report#0;class#Report#0" />
-                <element signature="method#createExpenseReport#0;class#Report#0" />
-                <element signature="method#createDepartmentReport#0;class#Report#0" />
-                <element signature="method#getEventExpense#0;class#Report#0" />
-                <element signature="method#getRetirementMatch#0;class#Report#0" />
-                <element signature="method#getNumberOfEmployees#0;class#Report#0" />
-                <element signature="method#getNumberOfEmployees#1;class#Report#0" />
-                <element signature="method#getHoursWorked#0;class#Report#0" />
-                <element signature="method#getHoursWorked#1;class#Report#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -121,12 +110,12 @@
         <option value="$PROJECT_DIR$/Employee_Info.txt" />
         <option value="$PROJECT_DIR$/src/insuracePlan.java" />
         <option value="$PROJECT_DIR$/src/Employee.java" />
-        <option value="$PROJECT_DIR$/src/EventDatabase.java" />
         <option value="$PROJECT_DIR$/src/employeeDatabase.java" />
         <option value="$PROJECT_DIR$/src/EventDepartment.java" />
         <option value="$PROJECT_DIR$/src/Report.java" />
-        <option value="$PROJECT_DIR$/src/HRDepartment.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+        <option value="$PROJECT_DIR$/src/EventDatabase.java" />
+        <option value="$PROJECT_DIR$/src/HRDepartment.java" />
       </list>
     </option>
   </component>
@@ -141,8 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +155,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,7 +164,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554427069462" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554745683793" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -242,7 +231,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.12219851" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.13340448" />
       <window_info id="Structure" order="1" sideWeight="0.5024311" side_tool="true" weight="0.12219851" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -426,16 +415,6 @@
     <entry file="file://$PROJECT_DIR$/insurancePlan_Info.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/insuracePlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2705">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Event.java" />
     <entry file="file://$PROJECT_DIR$/src/complaintDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -451,13 +430,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -539,14 +511,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
+    <entry file="file://$PROJECT_DIR$/src/insuracePlan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+        <state relative-caret-position="15">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4679#7226#1" />
-            <element signature="e#11973#11974#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,6 +525,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="93" column="4" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="238" column="45" selection-start-line="238" selection-start-column="45" selection-end-line="238" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4679#7226#1" />
+          </folding>
         </state>
       </provider>
     </entry>

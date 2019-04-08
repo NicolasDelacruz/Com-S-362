@@ -89,26 +89,8 @@ public class EventDatabase {
             }
         }
         System.out.println("Leaving Events..");
-        fileReader.close();
-
+        //fileReader.close();
     }
-    
-//    public void getNextEvent(){
-//        boolean endOfComplaint = false;
-//        String currentLine;
-//        while(!endOfComplaint){
-//            currentLine = fileReader.nextLine();
-//            if(currentLine.equals("BEGIN OF EVENT")){
-//                System.out.println("Beggining of event:");
-//            }
-//            else if(currentLine.equals("END OF EVENT")){
-//                endOfComplaint = true;
-//            }
-//            else{
-//                System.out.println(currentLine);
-//            }
-//        }
-//    }
     
     public Event getEvent(int id) throws IOException {
     	File inputFile = new File("Events.txt");
