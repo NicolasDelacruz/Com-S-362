@@ -123,15 +123,13 @@ public class Report {
 
         while ((currentLine = reader.readLine()) != null) {
            eventInfo = Arrays.asList(currentLine.split("\\s*,\\s*"));
-            if(eventInfo.size() == 1 && !eventInfo.get(0).equals("Event Database")){
+            if(eventInfo.size() == 1 && eventInfo.get(0).equals("BEGIN OF EVENT") && !eventInfo.get(0).equals("Event Database")){
                 currentLine = reader.readLine();
                 eventInfo = Arrays.asList(currentLine.split("\\s*,\\s*"));
                 eventExpense += Integer.valueOf(eventInfo.get(5));
                 numberOfEvents++;
                 if(Integer.valueOf(eventInfo.get(5)) > maxExpense){
                     maxExpense = Integer.valueOf(eventInfo.get(5));
-                }
-                while((currentLine = reader.readLine()) != null && !eventInfo.get(0).equals("END OF EVENT")){
                 }
             }
         }

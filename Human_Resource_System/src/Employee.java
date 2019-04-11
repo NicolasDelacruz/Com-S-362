@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Employee implements EmployeeInterface {
     private String department, DOB, hireDate, name;
     private int ID, salary;
-    private double retirement;
+    private double retirement, ira;
 
     public Employee(String empDepartment, String empDOB, String empHireDate, String empName, int empID, int empSalary, double empRetirement){
         department = empDepartment;
@@ -19,6 +19,7 @@ public class Employee implements EmployeeInterface {
         ID = empID;
         salary = empSalary;
         retirement = empRetirement;
+        ira = 0;
     }
 
     @Override
@@ -59,6 +60,18 @@ public class Employee implements EmployeeInterface {
     @Override
     public void setDepartment(String dep) {
         department = dep;
+    }
+    
+    @Override
+    public void setIRA(double ira)
+    {
+    	this.ira = ira;
+    }
+    
+    @Override
+    public double getIRA()
+    {
+    	return ira;
     }
 
     @Override

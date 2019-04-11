@@ -9,3 +9,4 @@ Rick, 1234, Human Resources, 12000, 01/01/1990, 03/05/2019, 0.0
 Rick, 1122, Human Resources, 12000, 01/01/1990, 03/05/2019, 0.0
 Timmy, 4441, Human Resources, 12000, 01/01/1990, 03/05/2019, 0.0
 Event Test, 1278, Event Management, 12000, 01/01/1990, 03/05/2019, 0.0
+Tester, 1214, Event Management, 12000, 01/01/1990, 03/05/2019, 0.0
