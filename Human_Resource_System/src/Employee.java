@@ -77,7 +77,9 @@ public class Employee implements EmployeeInterface {
     @Override
     public void doAction() throws IOException {
         employeeDatabase e = new employeeDatabase();
-        e.addEmployee(this);
+        if(e.getEmployee(this.getID()) == null) {
+            e.addEmployee(this);
+        }
         if(getDepartment().equals("Human Resources")){
             HRDepartment hrEmployee = new HRDepartment(this);
             hrEmployee.doFunctions();

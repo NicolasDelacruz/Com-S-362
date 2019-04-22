@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11201d3-2026-45f5-b44e-b86f56af6b96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/SystemProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp_Retirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Emp_Retirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee_Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Employee_Info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/insurancePlan_Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/insurancePlan_Info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/EmployeeInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/EmployeeInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/EventDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/EventDepartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/HRDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/HRDepartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/Report.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HRDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HRDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeeDatabase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,26 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#printAvailableOptions#0;class#HRDepartment#0" />
-                <element signature="e#3409#4756#1" />
-                <element signature="method#printEmplFunctions#0;class#HRDepartment#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/employeeDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="167" selection-start-line="167" selection-end-line="167" />
+            <state relative-caret-position="-299">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,40 +35,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EventDepartment.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SystemProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="184" column="36" selection-start-line="184" selection-start-column="36" selection-end-line="184" selection-end-column="36" />
-              <folding>
-                <element signature="method#printAvailableOptions#0;class#EventDepartment#0" />
-                <element signature="e#3165#4512#1" />
-                <element signature="method#printEventFunctions#0;class#EventDepartment#0" />
-                <element signature="method#doEventFunctions#0;class#EventDepartment#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Emp_Retirements.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Report.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+            <state relative-caret-position="83">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Report#0;class#Report#0" />
-                <element signature="method#createExpenseReport#0;class#Report#0" />
-                <element signature="method#createDepartmentReport#0;class#Report#0" />
-                <element signature="method#getRetirementMatch#0;class#Report#0" />
-                <element signature="method#getNumberOfEmployees#0;class#Report#0" />
-                <element signature="method#getHoursWorked#0;class#Report#0" />
-                <element signature="method#getTotalHoursWorked#0;class#Report#0" />
               </folding>
             </state>
           </provider>
@@ -98,17 +50,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Events.txt">
+        <entry file="file://$PROJECT_DIR$/Employee_LogIn.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Employee_Info.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -142,6 +99,7 @@
       <find>What act</find>
       <find>system.</find>
       <find>Syste</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,7 +111,6 @@
         <option value="$PROJECT_DIR$/Test/src/Test.java" />
         <option value="$PROJECT_DIR$/src/EmployeeInformation.java" />
         <option value="$PROJECT_DIR$/file.txt" />
-        <option value="$PROJECT_DIR$/src/System.java" />
         <option value="$PROJECT_DIR$/src/DepartmentInterface.java" />
         <option value="$PROJECT_DIR$/src/JobApplicant.java" />
         <option value="$PROJECT_DIR$/Job_Postings.txt" />
@@ -170,18 +127,21 @@
         <option value="$PROJECT_DIR$/src/JobPost.java" />
         <option value="$PROJECT_DIR$/Employee_Info.txt" />
         <option value="$PROJECT_DIR$/src/insuracePlan.java" />
-        <option value="$PROJECT_DIR$/src/Employee.java" />
         <option value="$PROJECT_DIR$/src/EventDatabase.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/EventDepartment.java" />
         <option value="$PROJECT_DIR$/src/RetirementDatabase.java" />
         <option value="$PROJECT_DIR$/src/Report.java" />
-        <option value="$PROJECT_DIR$/src/employeeDatabase.java" />
         <option value="$PROJECT_DIR$/src/HRDepartment.java" />
+        <option value="$PROJECT_DIR$/src/System.java" />
+        <option value="$PROJECT_DIR$/src/employeeDatabase.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+        <option value="$PROJECT_DIR$/src/Employee.java" />
+        <option value="$PROJECT_DIR$/src/SystemProgram.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
@@ -192,6 +152,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,8 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +186,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554918945970" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555957773468" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -293,7 +253,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.1430096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.15101388" />
       <window_info id="Structure" order="1" sideWeight="0.5024311" side_tool="true" weight="0.12219851" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -307,7 +267,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32715377" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32497275" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
@@ -321,7 +281,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.12219851" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.15101388" />
       <window_info id="Structure" order="1" sideWeight="0.5024311" side_tool="true" weight="0.12219851" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -335,7 +295,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32715377" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32497275" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
@@ -353,16 +313,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Report.java</url>
-          <line>123</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/EventDepartment.java</url>
           <line>171</line>
           <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java</url>
+          <line>5</line>
+          <properties />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -375,7 +335,6 @@
     <entry file="file://$PROJECT_DIR$/Test/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/file.txt" />
     <entry file="file://$PROJECT_DIR$/src/EmployeeInformation.java" />
-    <entry file="file://$PROJECT_DIR$/src/System.java" />
     <entry file="file://$PROJECT_DIR$/HR_System.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -527,20 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Work_Hours.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/insuracePlan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -565,50 +510,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Employee_Info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Emp_Retirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Report.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Report#0;class#Report#0" />
-            <element signature="method#createExpenseReport#0;class#Report#0" />
-            <element signature="method#createDepartmentReport#0;class#Report#0" />
-            <element signature="method#getRetirementMatch#0;class#Report#0" />
-            <element signature="method#getNumberOfEmployees#0;class#Report#0" />
-            <element signature="method#getHoursWorked#0;class#Report#0" />
-            <element signature="method#getTotalHoursWorked#0;class#Report#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Events.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="18">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EventDepartment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="2235">
           <caret line="184" column="36" selection-start-line="184" selection-start-column="36" selection-end-line="184" selection-end-column="36" />
           <folding>
             <element signature="method#printAvailableOptions#0;class#EventDepartment#0" />
@@ -619,25 +530,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/System.java" />
+    <entry file="file://$PROJECT_DIR$/Work_Hours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Emp_Retirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="113" column="13" lean-forward="true" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createExpenseReport#0;class#Report#0" />
+            <element signature="method#createDepartmentReport#0;class#Report#0" />
+            <element signature="method#getRetirementMatch#0;class#Report#0" />
+            <element signature="method#getNumberOfEmployees#0;class#Report#0" />
+            <element signature="method#getHoursWorked#0;class#Report#0" />
+            <element signature="method#getTotalHoursWorked#0;class#Report#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/employeeDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        <state relative-caret-position="-299">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Employee_Info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Employee_LogIn.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#printAvailableOptions#0;class#HRDepartment#0" />
             <element signature="e#3409#4756#1" />
             <element signature="method#printEmplFunctions#0;class#HRDepartment#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

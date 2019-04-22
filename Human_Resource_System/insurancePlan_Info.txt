@@ -20,3 +20,10 @@ children:4
 price:9600
 desc:Full dental coverage, up to $3,000 per person outside of checkups, Complete medical appointments, $2000 deductible on operations up to $100,000
 END
+id:1214
+type:1
+s/f:1
+children:2
+price:4300
+desc:Complete medical appointments, dental check ups, $1000 deductible on operations up to $50,000
+END

@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class employeeDatabase {
     File file;
@@ -68,6 +69,13 @@ public class employeeDatabase {
             write(employeeRecord);
         }
 
+        SystemProgram sp = new SystemProgram();
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter new password: ");
+        String newPassword = input.nextLine();
+        input.close();
+        sp.changePassword(e.getID(), newPassword);
     }
 
     /**
