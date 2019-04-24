@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f11201d3-2026-45f5-b44e-b86f56af6b96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PerformanceReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee_Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Employee_Info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/HRDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/HRDepartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/SystemProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/SystemProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_System/employeeDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_System/employeeDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HRDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HRDepartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeeDatabase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,61 +18,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Employee_Info.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SystemProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="222" selection-start-line="222" selection-end-line="222" />
+            <state relative-caret-position="359">
+              <caret line="446" column="95" selection-start-line="446" selection-start-column="95" selection-end-line="446" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#HRDepartment#0;class#HRDepartment#0" />
                 <element signature="method#doFunctions#0;class#HRDepartment#0" />
                 <element signature="method#printAvailableOptions#0;class#HRDepartment#0" />
                 <element signature="method#doEmplFunctions#0;class#HRDepartment#0" />
                 <element signature="e#3409#4756#1" />
                 <element signature="method#printEmplFunctions#0;class#HRDepartment#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PerformanceReview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#10753#13300#1" />
               </folding>
             </state>
           </provider>
@@ -131,7 +82,6 @@
         <option value="$PROJECT_DIR$/Job_Postings.txt" />
         <option value="$PROJECT_DIR$/src/Complaint.java" />
         <option value="$PROJECT_DIR$/src/DatabaseInterface.java" />
-        <option value="$PROJECT_DIR$/src/EmployeeInterface.java" />
         <option value="$PROJECT_DIR$/Work_Hours.txt" />
         <option value="$PROJECT_DIR$/src/complaintDatabase.java" />
         <option value="$PROJECT_DIR$/src/WorkHoursDatabase.java" />
@@ -149,10 +99,11 @@
         <option value="$PROJECT_DIR$/src/System.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/SystemProgram.java" />
-        <option value="$PROJECT_DIR$/src/Employee.java" />
         <option value="$PROJECT_DIR$/src/employeeDatabase.java" />
-        <option value="$PROJECT_DIR$/src/HRDepartment.java" />
         <option value="$PROJECT_DIR$/src/PerformanceReview.java" />
+        <option value="$PROJECT_DIR$/src/EmployeeInterface.java" />
+        <option value="$PROJECT_DIR$/src/Employee.java" />
+        <option value="$PROJECT_DIR$/src/HRDepartment.java" />
       </list>
     </option>
   </component>
@@ -269,7 +220,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.15421557" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756888" visible="true" weight="0.15421557" />
       <window_info id="Structure" order="1" sideWeight="0.5024311" side_tool="true" weight="0.12219851" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -278,12 +229,12 @@
       <window_info id="Favorites" order="6" sideWeight="0.50054526" side_tool="true" weight="0.24919957" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32497275" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32497275" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
@@ -353,13 +304,6 @@
     <entry file="file://$PROJECT_DIR$/src/EmployeeInformation.java" />
     <entry file="file://$PROJECT_DIR$/HR_System.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmployeeInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" selection-end-line="49" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DepartmentInterface.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -502,16 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/insuracePlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EventDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -586,33 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="222" selection-start-line="222" selection-end-line="222" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HRDepartment#0;class#HRDepartment#0" />
-            <element signature="method#doFunctions#0;class#HRDepartment#0" />
-            <element signature="method#printAvailableOptions#0;class#HRDepartment#0" />
-            <element signature="method#doEmplFunctions#0;class#HRDepartment#0" />
-            <element signature="e#3409#4756#1" />
-            <element signature="method#printEmplFunctions#0;class#HRDepartment#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -639,10 +546,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PerformanceReview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+        <state relative-caret-position="460">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmployeeInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="e#1608#1609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/insuracePlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HRDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="446" column="95" selection-start-line="446" selection-start-column="95" selection-end-line="446" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doFunctions#0;class#HRDepartment#0" />
+            <element signature="method#printAvailableOptions#0;class#HRDepartment#0" />
+            <element signature="method#doEmplFunctions#0;class#HRDepartment#0" />
+            <element signature="e#3409#4756#1" />
+            <element signature="method#printEmplFunctions#0;class#HRDepartment#0" />
+            <element signature="e#10753#13300#1" />
           </folding>
         </state>
       </provider>

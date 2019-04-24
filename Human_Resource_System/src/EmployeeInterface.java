@@ -53,6 +53,12 @@ public interface EmployeeInterface {
     public double getIRA();
 
     /**
+     * give employee raise
+     * @param r - raise % increase
+     */
+    public void giveRaise(int r);
+
+    /**
      * does the work allocated to the employee's department
      * @throws IOException
      */

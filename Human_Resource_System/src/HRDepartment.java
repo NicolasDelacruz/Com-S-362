@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -13,6 +14,7 @@ public class HRDepartment implements DepartmentInterface {
     String department;
     Employee tempEmp;
     EventDatabase ed;
+    prevEmployeeDatabase ped;
     int id;
 
     public HRDepartment(Employee e) throws FileNotFoundException {
@@ -21,6 +23,7 @@ public class HRDepartment implements DepartmentInterface {
         id = e.getID();
         jpdb = new JobPostDatabase();
         ed = new EventDatabase();
+        ped = new prevEmployeeDatabase();
     }
 
     @Override
@@ -362,6 +365,70 @@ public class HRDepartment implements DepartmentInterface {
                 PerformanceReview pr = new PerformanceReview();
                 pr.employeePerformanceReview();
             }
+            // Fire Employee
+            else if(command.equals("FE"))
+            {
+                System.out.println("What employee ID is being fired?");
+                int empID = Integer.parseInt(reader.nextLine());
+
+                System.out.println("Why is the employee being fired?");
+                String reas = reader.nextLine();
+
+                String date = new Date().toString();
+
+                employeeDatabase ed = new employeeDatabase();
+                Employee emp = ed.getEmployee(empID);
+                ed.removeEmployee(emp);
+
+                ped.addEmployee(emp, "Fired", reas, date);
+            }
+            // View Previous Employees
+            else if(command.equals("VPE"))
+            {
+                ped.viewPrevEmployees();
+            }
+            // Review Employee
+            else if(command.equals("RE"))
+            {
+                System.out.println("What employee ID is being reviewed?");
+                int empID = Integer.parseInt(reader.nextLine());
+
+                employeeDatabase ed = new employeeDatabase();
+                ed.printEmployeeInfo(empID);
+
+                System.out.println("Would you like to give this employee a raise or fire them?");
+                String answer = reader.nextLine();
+
+                if(answer.equals("raise") || answer.equals("Raise"))
+                {
+                    System.out.println("What percentage of a raise should this employee recieve?");
+                    int raise = Integer.parseInt(reader.nextLine());
+
+                    Employee emp = ed.getEmployee(empID);
+                    ed.removeEmployee(emp);
+
+                    emp.giveRaise(raise);
+
+                    ed.addEmployee(emp);
+                }
+                else if(answer.equals("fire") || answer.equals("Fire"))
+                {
+                    System.out.println("Why is the employee being fired?");
+                    String reas = reader.nextLine();
+
+                    String date = new Date().toString();
+
+                    Employee emp = ed.getEmployee(empID);
+                    ed.removeEmployee(emp);
+
+                    ped.addEmployee(emp, "Fired", reas, date);
+                }
+                else {
+                    System.out.println("Incorrect input, please try again.");
+                }
+
+            }
+
             else if(command.equals("VF")){
                 printHRFunctions();
             }
@@ -377,6 +444,7 @@ public class HRDepartment implements DepartmentInterface {
     public void printHRFunctions(){
         System.out.println("Employee Management:");
         System.out.println("View Complaints [VC], Transfer Employee [TR], Employee Performance Review [EPR]");
+        System.out.println("View Previous Employees [VPE], Review Employee [RE], Fire Employee [FE]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");

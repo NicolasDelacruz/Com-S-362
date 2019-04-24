@@ -78,6 +78,11 @@ public class Employee implements EmployeeInterface {
     	return ira;
     }
 
+    public void giveRaise(int p)
+    {
+        salary += salary * p * .01;
+    }
+
     @Override
     public void doAction() throws IOException {
         employeeDatabase e = new employeeDatabase();
