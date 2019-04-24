@@ -358,6 +358,10 @@ public class HRDepartment implements DepartmentInterface {
                     System.out.println("Report has previously been created and is in your downloads folder.");
                 }
             }
+            else if(command.equals("EPR")){
+                PerformanceReview pr = new PerformanceReview();
+                pr.employeePerformanceReview();
+            }
             else if(command.equals("VF")){
                 printHRFunctions();
             }
@@ -372,7 +376,7 @@ public class HRDepartment implements DepartmentInterface {
 
     public void printHRFunctions(){
         System.out.println("Employee Management:");
-        System.out.println("View Complaints [VC], Transfer Employee [TR]");
+        System.out.println("View Complaints [VC], Transfer Employee [TR], Employee Performance Review [EPR]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");

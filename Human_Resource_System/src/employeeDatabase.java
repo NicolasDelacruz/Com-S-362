@@ -79,6 +79,29 @@ public class employeeDatabase {
     }
 
     /**
+     * write employee e's data in the file using write(String s)
+     * @param e - employee being added to the list of employee data
+     */
+    public void addEmployeeNP(Employee e) throws IOException {
+
+        if(getEmployee(e.getID()) == null) {
+            String employeeRecord;
+
+            String name = e.getEmployeeName();
+            String department = e.getDepartment();
+            String DOB = e.getDOB();
+            String hireDate = e.getHireDate();
+            int ID = e.getID();
+            int salary = e.getSalary();
+            double retirement = e.getRetirement();
+
+            employeeRecord = name + ", " + ID + ", " + department + ", " + salary + ", " + DOB + ", " + hireDate + ", " + retirement;
+
+            write(employeeRecord);
+        }
+    }
+
+    /**
      * remove employee e's data from the file
      * @param e - employee being deleted from the list of employee data
      * @throws IOException

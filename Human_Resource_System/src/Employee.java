@@ -52,6 +52,10 @@ public class Employee implements EmployeeInterface {
         return salary;
     }
 
+    public void setSalary(int newSalary){
+        salary = newSalary;
+    }
+
     @Override
     public double getRetirement() {
         return retirement;
