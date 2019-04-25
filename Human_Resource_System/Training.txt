@@ -1,0 +1,8 @@
+Training Database
+BEGIN OF TRAINING
+1	FERPA Training	GEN
+In this training the following will be covered:
+*What is FERPA?
+*How to avoid violating FERPA rules
+*Why FERPA is important
+END OF TRAINING

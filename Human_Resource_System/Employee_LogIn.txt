@@ -1,3 +1,5 @@
 EMPLOYEE ID, PASSWORD
 1000, Test
-1001, Test
+1002, JimmyTest
+1003, TimmyTest
+1004, TristanaTest

@@ -256,14 +256,14 @@ public class HRDepartment implements DepartmentInterface {
                 if(e==null) {
                     System.out.println("Enter Address: ");
                     String address = reader.nextLine();
-                    System.out.println("Enter Social Security Number: ");
-                    int ssn = reader.nextInt();
+                    System.out.println("Enter employee name: ");
+                    String name = reader.nextLine();
                     System.out.println("Enter Account Number: ");
                     int account = reader.nextInt();
                     System.out.println("Enter Routing Number: ");
                     int routing = reader.nextInt();
                     reader.nextLine();
-                    DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, ssn, account, routing);
+                    DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, name, account, routing);
                     tempdd.addDirectDeposit(e2);
                 }
                 else {
@@ -274,19 +274,19 @@ public class HRDepartment implements DepartmentInterface {
                     if (b.equals("ADD")) {
                         System.out.println("Enter Address: ");
                         String address = reader.nextLine();
-                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, e.getEmpID(), e.getAccount(), e.getRouting());
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, e.getName(), e.getAccount(), e.getRouting());
                     }
                     else if (b.equals("ACC")) {
                         System.out.println("Enter Account Number: ");
                         int account = reader.nextInt();
                         reader.nextLine();
-                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getEmpID(), account, e.getRouting());
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getName(), account, e.getRouting());
                     }
                     else if (b.equals("ROU")) {
                         System.out.println("Enter Routing Number: ");
                         int routing = reader.nextInt();
                         reader.nextLine();
-                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getEmpID(), e.getAccount(), routing);
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getName(), e.getAccount(), routing);
                     }
                 }
             }

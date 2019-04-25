@@ -1,2 +1,5 @@
 NAME, ID, DEPARTMENT, SALARY, DOB, HIRE_DATE, RETIREMENT
 Rick, 1000, Human Resources, 35000, 03/03/1990, 03/03/2019, 0.0
+Jimmy Test, 1002, Event Management, 30000, 00/01/2001, 03/03/2019, 0.0
+TimmyTest, 1003, Human Resources, 150000, 00/00/1990, 03/03/2001, 0.0
+Tristana, 1004, Human Resoures, 16000, 01/01/1900, 03/03/2001, 0.0

@@ -57,11 +57,11 @@ public class DirectDepositDatabase {
             // DepositInfo ID, Employee ID, Account Number, Routing Number, Address
             String address = e.getAddress();
             int routing = e.getRouting();
-            int empID = e.getEmpID();
+            String name = e.getName();
             int ID = e.getID();
             int account = e.getAccount();
 
-            DepositInfoRecord = ID + ", " + empID + ", " + account + ", " + routing + ", " + address;
+            DepositInfoRecord = ID + ", " + name + ", " + account + ", " + routing + ", " + address;
 
             write(DepositInfoRecord);
         }
@@ -84,11 +84,11 @@ public class DirectDepositDatabase {
 
         String address = e.getAddress();
         int rounting = e.getRouting();
-        int empID = e.getEmpID();
+        String name = e.getName();
         int ID = e.getID();
         int account = e.getAccount();
 
-        DepositInfoRecord = ID + ", " + empID + ", " + account + ", " + rounting + ", " + address;
+        DepositInfoRecord = ID + ", " + name + ", " + account + ", " + rounting + ", " + address;
         
         String currentLine;
 
@@ -116,7 +116,8 @@ public class DirectDepositDatabase {
         DepositInfo de;
 
         String address;
-    	int ssn, account, routing, id;
+        String name;
+    	int account, routing, id;
     	
         String currentLine;
         String strID = Integer.toString(d);
@@ -129,9 +130,9 @@ public class DirectDepositDatabase {
             	account = Integer.parseInt(DepositInfoInfo.get(2));
             	address = DepositInfoInfo.get(4);
                 id = Integer.parseInt(DepositInfoInfo.get(0));
-                ssn = Integer.parseInt(DepositInfoInfo.get(1));
+                name = DepositInfoInfo.get(1);
                 routing = Integer.parseInt(DepositInfoInfo.get(3));
-                de = new DepositInfo(id, address, ssn, account, routing);
+                de = new DepositInfo(id, address, name, account, routing);
 
                 return de;
             }

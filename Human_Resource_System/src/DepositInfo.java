@@ -1,12 +1,13 @@
 
 public class DepositInfo {
 	String address;
-	int empID, account, routing, id;
+	String name;
+	int account, routing, id;
 	
-	public DepositInfo(int eid, String eaddress, int empIDGiven, int eaccount, int erouting) {
+	public DepositInfo(int eid, String eaddress, String givenName, int eaccount, int erouting) {
 		id = eid;
 		address = eaddress;
-		empID = empIDGiven;
+		name = givenName;
 		account = eaccount;
 		routing = erouting;
 	}
@@ -19,8 +20,8 @@ public class DepositInfo {
 		return address;
 	}
 	
-	public int getEmpID() {
-		return empID;
+	public String getName() {
+		return name;
 	}
 	
 	public int getAccount() {
