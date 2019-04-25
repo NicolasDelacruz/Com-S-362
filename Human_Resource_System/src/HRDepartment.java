@@ -1,5 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -247,6 +248,55 @@ public class HRDepartment implements DepartmentInterface {
                 a.addPaystub(id, beginDate, endDate, rate, hours, vacationUsedHours, taxRate, employeePaidBenefits);
                 System.out.println("Your input has been updated!");
             }
+            else if(command.equals("ED")) {
+                DirectDepositDatabase tempdd = new DirectDepositDatabase();
+                DepositInfo e = tempdd.getDirectDeposit(tempEmp.getID());
+                if(e==null) {
+                    System.out.println("Enter Address: ");
+                    String address = reader.nextLine();
+                    System.out.println("Enter Social Security Number: ");
+                    int ssn = reader.nextInt();
+                    System.out.println("Enter Account Number: ");
+                    int account = reader.nextInt();
+                    System.out.println("Enter Routing Number: ");
+                    int routing = reader.nextInt();
+                    reader.nextLine();
+                    DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, ssn, account, routing);
+                    tempdd.addDirectDeposit(e2);
+                }
+                else {
+                    tempdd.removeDirectDeposit(e);
+                    System.out.println("Choose which one to edit: ");
+                    System.out.println("Address [ADD], Account Number [ACC], Routing Number [ROU]");
+                    String b = reader.nextLine();
+                    if (b.equals("ADD")) {
+                        System.out.println("Enter Address: ");
+                        String address = reader.nextLine();
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), address, e.getEmpID(), e.getAccount(), e.getRouting());
+                    }
+                    else if (b.equals("ACC")) {
+                        System.out.println("Enter Account Number: ");
+                        int account = reader.nextInt();
+                        reader.nextLine();
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getEmpID(), account, e.getRouting());
+                    }
+                    else if (b.equals("ROU")) {
+                        System.out.println("Enter Routing Number: ");
+                        int routing = reader.nextInt();
+                        reader.nextLine();
+                        DepositInfo e2 = new DepositInfo(tempEmp.getID(), e.getAddress(), e.getEmpID(), e.getAccount(), routing);
+                    }
+                }
+            }
+            else if(command.equals("VT")){
+                TrainingDatabase td = new TrainingDatabase();
+                System.out.println("new employee [NEW], general employee [GEN], HR Department [HR], Event Department [EV], All [ALL]");
+                String t = reader.nextLine();
+                if(!t.equals("ALL"))
+                    td.printTrainingType(t);
+                else
+                    td.viewTrainings();
+            }
             else if(command.equals("VF")){
                 printEmplFunctions();
             }
@@ -260,7 +310,7 @@ public class HRDepartment implements DepartmentInterface {
 
     public void printEmplFunctions(){
         System.out.println("Employee Functions:");
-        System.out.println("Find Employee [FE],  Report Complaints [RC]");
+        System.out.println("Find Employee [FE],  Report Complaints [RC], Edit Direct Deposit [ED]");
         System.out.println("------");
         System.out.println("Retirement and Insurance:");
         System.out.println("View Retirement Report [VR], Change Employee's Contribution to Retirement [CR]");
@@ -275,6 +325,9 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("View Events [VE], RSVP to an Event [RS]");
         System.out.println("Employee Benefits:");
         System.out.println("Employee Add Claim [EAC], Employee Calculate Paystub [ECP]");
+        System.out.println("------");
+        System.out.println("Employee Training:");
+        System.out.println("View Training [VT]");
         System.out.println("------");
         System.out.println("------");
         System.out.println("View Functions [VF], Return to Main Menu [R] or [Q]");
@@ -505,6 +558,34 @@ public class HRDepartment implements DepartmentInterface {
                 calculatePaystubDatabase a = new calculatePaystubDatabase();
                 a.viewPlaystub(id);
             }
+            else if(command.equals("CT")) {
+                ArrayList<String> s = new ArrayList<String>();
+                TrainingDatabase td = new TrainingDatabase();
+                String t = "";
+                System.out.println("Enter Event Title : ");
+                String title = reader.nextLine();
+                System.out.println("Enter new training ID : "); // This is just identification number for given strings
+                int id = reader.nextInt();
+                reader.nextLine();
+                while(td.checkID(id)) {
+                    System.out.println("Corresponding ID number already taken. Please enter new series of number");
+                    id = reader.nextInt();
+                    reader.nextLine();
+                }
+                // This can be used to tell who needs to complete which training
+                System.out.println("Enter what type of Training it is : ");
+                System.out.println("new employee [NEW], general employee [GEN], HR Department [HR], Event Department [EV]");
+                String type = reader.nextLine();
+                while(!type.equals("NEW")&&!type.equals("GEN")&&!type.equals("HR")&&!type.equals("EV")) {
+                    type = reader.nextLine();
+                }
+                System.out.println("Enter Event Detail : (enter 'endoftraining' to finish) ");
+                while(!t.contains("endoftraining")) {
+                    s.add(t);
+                    t = reader.nextLine();
+                }
+                td.addTraining(s, title, type, id);
+            }
             else if(command.equals("VF")){
                 printHRFunctions();
             }
@@ -521,6 +602,7 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("Employee Management:");
         System.out.println("View Complaints [VC], Transfer Employee [TR], Employee Performance Review [EPR]");
         System.out.println("View Previous Employees [VPE], Review Employee [RE], Fire Employee [FE]");
+        System.out.println("Create Employee Training [CT]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");
