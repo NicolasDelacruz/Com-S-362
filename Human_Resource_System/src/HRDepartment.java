@@ -14,6 +14,7 @@ public class HRDepartment implements DepartmentInterface {
     Employee tempEmp;
     EventDatabase ed;
     prevEmployeeDatabase ped;
+    employeeDatabase empDB;
     int id;
 
     public HRDepartment(Employee e) throws FileNotFoundException {
@@ -23,6 +24,7 @@ public class HRDepartment implements DepartmentInterface {
         jpdb = new JobPostDatabase();
         ed = new EventDatabase();
         ped = new prevEmployeeDatabase();
+        empDB = new employeeDatabase();
     }
 
     @Override
@@ -589,6 +591,33 @@ public class HRDepartment implements DepartmentInterface {
             else if(command.equals("VF")){
                 printHRFunctions();
             }
+            else if(command.equals("AEM")){
+                System.out.println("Enter employee name:");
+                String name = reader.nextLine();
+
+                System.out.println("Enter employee department:");
+                String department = reader.nextLine();
+
+                System.out.println("Enter employee DOB (mm/dd/yyyy):");
+                String dob = reader.nextLine();
+
+                System.out.println("Enter employee hire date (mm/dd/yyyy):");
+                String hiredate = reader.nextLine();
+
+                System.out.println("Enter employee ID:");
+                int id = reader.nextInt();
+
+                System.out.println("Enter employee salary:");
+                int salary = reader.nextInt();
+
+                System.out.println("Enter employee retirement:");
+                double retirement = reader.nextInt();
+
+                Employee temp = new Employee(department, dob, hiredate, name, id, salary, retirement);
+                empDB.addEmployee(temp);
+                reader.nextLine();
+
+            }
             else if(command.equals("R")){
                 System.out.println("Leaving HR Screen.." );
                 return;
@@ -602,7 +631,7 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("Employee Management:");
         System.out.println("View Complaints [VC], Transfer Employee [TR], Employee Performance Review [EPR]");
         System.out.println("View Previous Employees [VPE], Review Employee [RE], Fire Employee [FE]");
-        System.out.println("Create Employee Training [CT]");
+        System.out.println("Create Employee Training [CT], Add New User [AEM]");
         System.out.println("------");
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");

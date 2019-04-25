@@ -74,7 +74,6 @@ public class employeeDatabase {
 
         System.out.println("Enter new password: ");
         String newPassword = input.nextLine();
-        input.close();
         sp.changePassword(e.getID(), newPassword);
     }
 
