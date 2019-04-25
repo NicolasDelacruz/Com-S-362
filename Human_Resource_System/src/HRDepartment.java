@@ -1,7 +1,5 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -180,6 +178,75 @@ public class HRDepartment implements DepartmentInterface {
                 temp.printEmployeeInfo(id);
                 reader.nextLine();
             }
+            else if(command.equals("EAC")){
+                employeeClaimDatabase c = new employeeClaimDatabase();
+                System.out.println("Please type you will claim.");
+                System.out.println("Please type 1 for gas reimbursement, 2 for travel reimbursement.");
+                System.out.println("Please type 3 for medical reimbursement, 4 for food reimbursement, 5 for others.");
+                command = reader.nextLine();
+                int type_i = Integer.valueOf(command);
+                String type="";
+                switch(type_i){
+                    case 1:
+                        type = "gas";
+                        break;
+                    case 2:
+                        type = "travel";
+                        break;
+                    case 3:
+                        type = "medical";
+                        break;
+                    case 4:
+                        type = "food";
+                        break;
+                    case 5:
+                        type = "others";
+                        break;
+                }
+                System.out.println("Please type the year.");
+                command = reader.nextLine();
+                int year = Integer.valueOf(command);
+                System.out.println("Please type the month.");
+                System.out.println("Please type 1 if it is January.");
+                command = reader.nextLine();
+                int month = Integer.valueOf(command);
+                System.out.println("Please type the day.");
+                command = reader.nextLine();
+                int day= Integer.valueOf(command);
+                System.out.println("Please type how much you will claim.");
+                command = reader.nextLine();
+                double spend= Double.valueOf(command);
+                c.addClaim(id, year, month, day, spend, type);
+                System.out.println("Your input has been updated!");
+            }
+            else if(command.equals("ECP")) {
+                calculatePaystubDatabase a = new calculatePaystubDatabase();
+                System.out.println("Please type the Begin Date.");
+                System.out.println("For example: 3/20/2019");
+                command = reader.nextLine();
+                String beginDate = command;
+                System.out.println("Please type the End Date.");
+                command = reader.nextLine();
+                String endDate = command;
+                System.out.println("Please type the wage rate.");
+                command = reader.nextLine();
+                double rate = Double.valueOf(command);
+                System.out.println("Please type the hours you worked.");
+                command = reader.nextLine();
+                double hours = Double.valueOf(command);
+                System.out.println("Please type the Vacation Hours you take.");
+                command = reader.nextLine();
+                double vacationUsedHours = Double.valueOf(command);
+                System.out.println("Please type the Tax Rate.");
+                System.out.println("Please type 7.5 if the tax rate is 7.5%");
+                command = reader.nextLine();
+                double taxRate = Double.valueOf(command);
+                System.out.println("Please type amount of employee paid benefits (in dollar).");
+                command = reader.nextLine();
+                double employeePaidBenefits = Double.valueOf(command);
+                a.addPaystub(id, beginDate, endDate, rate, hours, vacationUsedHours, taxRate, employeePaidBenefits);
+                System.out.println("Your input has been updated!");
+            }
             else if(command.equals("VF")){
                 printEmplFunctions();
             }
@@ -206,6 +273,8 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("------");
         System.out.println("Employee Events:");
         System.out.println("View Events [VE], RSVP to an Event [RS]");
+        System.out.println("Employee Benefits:");
+        System.out.println("Employee Add Claim [EAC], Employee Calculate Paystub [ECP]");
         System.out.println("------");
         System.out.println("------");
         System.out.println("View Functions [VF], Return to Main Menu [R] or [Q]");
@@ -428,7 +497,14 @@ public class HRDepartment implements DepartmentInterface {
                 }
 
             }
-
+            else if(command.equals("VEC")){
+                employeeClaimDatabase c = new employeeClaimDatabase();
+                c.viewClaim(id);
+            }
+            else if(command.equals("VEP")) {
+                calculatePaystubDatabase a = new calculatePaystubDatabase();
+                a.viewPlaystub(id);
+            }
             else if(command.equals("VF")){
                 printHRFunctions();
             }
@@ -449,6 +525,8 @@ public class HRDepartment implements DepartmentInterface {
         System.out.println("Employee Recruitment:");
         System.out.println("Add Job Post [AJP], View Job Post [VJP], Select Job Post[SJP]");
         System.out.println("------");
+        System.out.println("View Employee Benefits:");
+        System.out.println("View Employee Claims [VEC], View Employee Paystubs [VEP]");
         System.out.println("Report Generation:");
         System.out.println("Company Expense Report [CER], Department Statistics Report [DSR]");
         System.out.println("View Functions [VF], Return to Main Menu [R] or [Q]");

@@ -1,0 +1,10 @@
+id:1000
+beginDate:03/13/2019
+endDate:03/15/2019
+rate:10.0
+hours:40.0
+vac_hr:0.0
+taxRate:10.0
+ePB:0.0
+earning:400.0
+netPay:360.0

@@ -1,0 +1,12 @@
+id:1000
+year:2019
+month:4
+day:23
+cost:100.0
+type:gas
+id:1000
+year:2019
+month:3
+day:13
+cost:100.0
+type:travel
